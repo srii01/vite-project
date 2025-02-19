@@ -39,15 +39,6 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build
+        run: 
 
-      - name: Configure Git Identity  # 🔹 FIX: Set Git user identity
-        run: |
-          git config --global user.email "sripriyahg_ece@ksit.edu.in"
-          git config --global user.name "srii01"
-
-      - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
